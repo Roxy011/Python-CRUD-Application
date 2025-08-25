@@ -1,0 +1,45 @@
+{% extends "base.html" %} {%block head%} <title>CRUD</title> {%endblock%}
+{%block body%}
+<h1 class="heading">CRUD Application</h1>
+<p class="description">
+  Developed a CRUD web application using Python Flask and SQLAlchemy, enabling
+  users to create, read, update, and delete records efficiently. Implemented
+  RESTful routes with Flask, designed relational database models with
+  SQLAlchemy, and ensured smooth integration between backend and frontend.
+  Focused on clean code, responsive UI, and database optimization to provide a
+  user-friendly and scalable solution.
+</p>
+
+<div class="container">
+  <h3>Add your Task</h3>
+
+  <form action="/" method="POST">
+    <input type="text" placeholder="Enter Task" name="content" id="content" />
+    <input type="submit" id="btn" value="Add Task" />
+  </form>
+
+  {% if tasks | length < 1 %}
+  <p>No Tasks Added</p>
+  {% else %}
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Added</th>
+      <th>Actions</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+      <td class="title">{{task.content}}</td>
+      <td>{{task.created.strftime('%Y-%m-%d')}}</td>
+      <td>
+        <a class="del" href="/delete/{{task.id}}">Delete</a>
+        <a class="upd" href="/update/{{task.id}}">Update</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {%endif%}
+</div>
+
+{%endblock%}

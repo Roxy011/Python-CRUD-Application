@@ -1,0 +1,116 @@
+*{
+    padding: 20px;
+    margin: 0;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #14d1c1;
+}
+
+.description{
+    text-align: center;
+    font-size: 20px;
+    color: #d9d9d9;
+}
+
+.container{
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -80px;
+}
+
+table{
+    margin-top: -250px;
+    width: 950px;
+}
+
+th{
+    color: #14d1c1;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+.title{
+    font-size: 16px;
+    font-weight: 800;
+}
+
+form{
+    margin-top: -230px;
+}
+
+h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#content{
+    border-radius: 15px;
+    padding: 10px;
+    height: 20px;
+    width: 600px;
+    border: 2px solid #14d1c1;
+}
+
+#btn{
+    border-radius: 15px;
+    padding: 10px;
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #c9c9c9;
+    border: 1px solid;
+    color: black;
+}
+
+#btn:active{
+    border-color: #14d1c1;
+}
+
+#btn:hover{
+    background-color: #14d1c1;
+}
+
+.container .del{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(205, 66, 66);
+    border-radius: 8px;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.container .del:hover{
+    background-color: red;
+    color: white;
+}
+
+.container .upd{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(66, 134, 205);
+    border-radius: 8px;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.container .upd:hover{
+    background-color: rgb(66, 105, 205);
+    color: white;
+}
